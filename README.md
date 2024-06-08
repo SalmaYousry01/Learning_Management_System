@@ -119,7 +119,6 @@ Follow these steps to set up the application on your local machine:
 
 ## Directory Structure
 
-.
 ├── app
 │   ├── Http
 │   │   ├── Controllers
