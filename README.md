@@ -118,7 +118,7 @@ Follow these steps to set up the application on your local machine:
 -   **Submit**: Send the completed form to dispatch an email to the admin.
 
 ## Directory Structure
-
+```bash
 ├── app
 │   ├── Http
 │   │   ├── Controllers
@@ -147,6 +147,7 @@ Follow these steps to set up the application on your local machine:
 │           └── contact.blade.php (Contact email view)
 └── routes
     └── web.php (Contains the web routes for the application)
+```
 
 
 ## Demo Video
