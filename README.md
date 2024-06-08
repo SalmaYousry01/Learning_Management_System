@@ -121,33 +121,34 @@ Follow these steps to set up the application on your local machine:
 
 .
 ├── app
-│ ├── Http
-│ │ ├── Controllers
-│ │ │ ├── Contact
-│ │ │ │ └── ContactController.php (Handles contact form submissions)
-│ │ │ ├── Course
-│ │ │ │ └── CourseController.php (Handles course CRUD operations)
-│ │ │ ├── Dashboard
-│ │ │ │ └── DashboardController.php (Handles dashboard view)
-│ ├── Mail
-│ │ └── ContactMail.php (Defines the structure of the contact email)
-│ ├── Models
-│ │ ├── User.php (Defines the User model)
-│ │ └── Course.php (Defines the Course model)
+│   ├── Http
+│   │   ├── Controllers
+│   │   │   ├── Contact
+│   │   │   │   └── ContactController.php (Handles contact form submissions)
+│   │   │   ├── Course
+│   │   │   │   └── CourseController.php (Handles course CRUD operations)
+│   │   │   └── Dashboard
+│   │   │       └── DashboardController.php (Handles dashboard view)
+│   ├── Mail
+│   │   └── ContactMail.php (Defines the structure of the contact email)
+│   └── Models
+│       ├── User.php (Defines the User model)
+│       └── Course.php (Defines the Course model)
 ├── resources
-│ └── views
-│ ├── contact
-│ │ └── form.blade.php (Contact form view)
-│ ├── courses
-│ │ ├── index.blade.php (Courses list view)
-│ │ ├── create.blade.php (Create course view)
-│ │ ├── edit.blade.php (Edit course view)
-│ │ └── show.blade.php (Show course details view)
-│ ├── dashboard.blade.php (Dashboard view)
-│ └── emails
-│ └── contact.blade.php (Contact email view)
-├── routes
-│ └── web.php (Contains the web routes for the application)
+│   └── views
+│       ├── contact
+│       │   └── form.blade.php (Contact form view)
+│       ├── courses
+│       │   ├── index.blade.php (Courses list view)
+│       │   ├── create.blade.php (Create course view)
+│       │   ├── edit.blade.php (Edit course view)
+│       │   └── show.blade.php (Show course details view)
+│       ├── dashboard.blade.php (Dashboard view)
+│       └── emails
+│           └── contact.blade.php (Contact email view)
+└── routes
+    └── web.php (Contains the web routes for the application)
+
 
 ## Demo Video
 
