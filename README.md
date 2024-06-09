@@ -153,8 +153,7 @@ Follow these steps to set up the application on your local machine:
 ## Demo Video
 
 You can watch the demo video for the Learning Management System below:
-https://drive.google.com/file/d/1AxafweKXCBu0mqMcOxtyD3wZ1urLLFoG/view?usp=sharing
-
+https://youtu.be/dqDoFQbG8LQ
 ## Contribution
 
 Contributions are welcome! Please open an issue or submit a pull request for any improvements or bug fixes.
