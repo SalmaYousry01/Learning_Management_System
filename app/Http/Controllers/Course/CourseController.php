@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Course;
 use App\Http\Controllers\Controller;
 use App\Models\Course;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use PhpParser\Node\Stmt\Expression;
 
 class CourseController extends Controller
 {
@@ -18,7 +20,8 @@ class CourseController extends Controller
      */
     public function index()
     {
-        $courses = Course::all();
+        $courses = Course::where("users_id",Auth::user()->id)->get();
+        // dd($courses);
         return view('courses.index', ['courses' => $courses]);
     }
 
@@ -42,9 +45,20 @@ class CourseController extends Controller
             'start_date' => 'required|date',
             'end_date' => 'required|date|after_or_equal:start_date',
         ]);
-
-        Course::create($request->all());
+        // $user_id = Auth::user()->id;
+        try{
+        $course = new  Course();
+        $course->title = $request['title'];
+        $course->description = $request['description'];
+        $course->start_date = $request['start_date'];
+        $course->end_date = $request['end_date'];
+        $course->users_id = Auth::user()->id;
+        $course->save();
         return redirect()->route('courses.index')->with('success', 'Course created successfully.');
+        }
+        catch(\Exception $e){
+            dd($e->getMessage());
+        }
     }
 
     /**
