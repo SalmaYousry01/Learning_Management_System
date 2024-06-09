@@ -19,13 +19,6 @@ class ContactController extends Controller
 
 public function submitContactForm(Request $request)
 {
-    if (Auth::check()) {
-        $userEmail = Auth::user()->email;
-
-        $contactEmail = $request->email;
-
-        if ($userEmail === $contactEmail) {
-
             $request->validate([
                 'name' => 'required|string|max:255',
                 'email' => 'required|email|max:255',
@@ -41,10 +34,8 @@ public function submitContactForm(Request $request)
             Mail::to('salma.yousry.alhosary@gmail.com')->send(new ContactMail($details));
 
             return back()->with('success', 'Your message has been sent successfully!');
-        } else {
-            return back()->withInput()->withErrors(['email' => 'You are not authorized to send the email.']);
-        }
+        } 
     }
-}
 
-}
+
+
