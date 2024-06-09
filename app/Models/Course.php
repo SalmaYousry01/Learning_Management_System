@@ -15,8 +15,8 @@ class Course extends Model
         'end_date'
     ];
 
-    //     public function user()
-    // {
-    //     return $this->belongsTo(User::class);
-    // }
+        public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }
